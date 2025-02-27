@@ -16,7 +16,7 @@ const product3 = {
   description: 'Aby muži na rozpálených plážích kromě vašeho těla obdivovali také vaše nitro.',
 };
 
-const product1Element = document.querySelector('#product1');
+/*const product1Element = document.querySelector('#product1');
 
 product1Element.classList.add('border-primary');
 
@@ -26,4 +26,38 @@ button2Element.classList.remove('btn-primary');
 
 const cardTitle3Element = document.querySelector('#product3 .card-title');
 
-cardTitle3Element.classList.toggle('text-center');
+cardTitle3Element.classList.toggle('text-center');*/
+
+
+const product1HTML = document.querySelector('#product1');
+
+product1HTML.innerHTML = `
+  <img class="card-img-top" src=${product1.image} alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">${product1.name}</h2>
+      <p class="card-text">${product1.description}</p>
+    </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
+
+const product2HTML = document.querySelector('#product2');
+
+product2HTML.innerHTML = `
+  <img class="card-img-top" src=${product2.image} alt="Slepičkabelka">
+    <div class="card-body">
+      <h2 class="card-title">${product2.name}</h2>
+      <p class="card-text">${product2.description}</p>
+    </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
+
+const product3HTML = document.querySelector('#product3');
+
+product3HTML.innerHTML = `
+  <img class="card-img-top" src=${product3.image} alt="Anatoplavky">
+    <div class="card-body">
+      <h2 class="card-title">${product3.name}</h2>
+      <p class="card-text">${product3.description}</p>
+    </div>
+  <button type="button" class="btn btn-lg btn-primary btn-block">Koupit</button>
+`;
